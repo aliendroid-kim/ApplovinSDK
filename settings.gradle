@@ -1,0 +1,3 @@
+rootProject.name = "ApplovinSDK"
+include ':app'
+include ':AlienAdsV2'
