@@ -82,6 +82,55 @@ public class AliendroidNative {
         nativeAdLoader.loadAd(nativeAdView);
     }
 
+    public static void SmallNativeMaxRectangle(Activity activity, RelativeLayout layNative, String selectAdsBackup, String nativeId, String idNativeBackup) {
+
+        MaxNativeAdViewBinder binder = new MaxNativeAdViewBinder.Builder(R.layout.max_small_native_rectangle)
+                .setTitleTextViewId(R.id.title_text_view)
+                .setBodyTextViewId(R.id.body_text_view)
+                .setAdvertiserTextViewId(R.id.advertiser_textView)
+                .setIconImageViewId(R.id.icon_image_view)
+                .setMediaContentViewGroupId(R.id.media_view_container)
+                .setOptionsContentViewGroupId(R.id.ad_options_view)
+                .setCallToActionButtonId(R.id.cta_button)
+                .build();
+        nativeAdView = new MaxNativeAdView(binder, activity);
+
+        nativeAdLoader = new MaxNativeAdLoader(nativeId, activity);
+        nativeAdLoader.setRevenueListener(new MaxAdRevenueListener() {
+            @Override
+            public void onAdRevenuePaid(MaxAd ad) {
+
+            }
+        });
+        nativeAdLoader.setNativeAdListener(new MaxNativeAdListener() {
+            @Override
+            public void onNativeAdLoaded(final MaxNativeAdView nativeAdView, final MaxAd ad) {
+                // Cleanup any pre-existing native ad to prevent memory leaks.
+                if (nativeAdMax != null) {
+                    nativeAdLoader.destroy(nativeAdMax);
+                }
+                // Save ad for cleanup.
+                nativeAdMax = ad;
+                // Add ad view to view.
+                layNative.removeAllViews();
+                layNative.addView(nativeAdView);
+            }
+
+            @Override
+            public void onNativeAdLoadFailed(final String adUnitId, final MaxError error) {
+
+            }
+
+            @Override
+            public void onNativeAdClicked(final MaxAd ad) {
+
+            }
+        });
+
+        nativeAdLoader.loadAd(nativeAdView);
+    }
+
+
     public static void SmallNativeMaxWhite(Activity activity, RelativeLayout layNative, String selectAdsBackup, String nativeId, String idNativeBackup) {
 
         MaxNativeAdViewBinder binder = new MaxNativeAdViewBinder.Builder(R.layout.max_small_native_white)
