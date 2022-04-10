@@ -1,7 +1,10 @@
 package com.aliendroid.alienads;
 
 import android.app.Activity;
+import android.os.Bundle;
 import android.widget.RelativeLayout;
+
+import androidx.annotation.NonNull;
 
 import com.applovin.adview.AppLovinAdView;
 import com.applovin.mediation.MaxAd;
@@ -11,6 +14,14 @@ import com.applovin.mediation.nativeAds.MaxNativeAdListener;
 import com.applovin.mediation.nativeAds.MaxNativeAdLoader;
 import com.applovin.mediation.nativeAds.MaxNativeAdView;
 import com.applovin.mediation.nativeAds.MaxNativeAdViewBinder;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdLoader;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.VideoOptions;
+import com.google.android.gms.ads.nativead.NativeAd;
+import com.google.android.gms.ads.nativead.NativeAdOptions;
+import com.google.android.gms.ads.nativead.NativeAdView;
 
 //Uranus
 public class AliendroidNative {
@@ -30,6 +41,11 @@ public class AliendroidNative {
 
 
     public static void SmallNativeAdmobNonStroke(Activity activity, RelativeLayout layNative, String selectAdsBackup, String nativeId, String idNativeBackup, String Hpk1,
+                                                 String Hpk2, String Hpk3, String Hpk4, String Hpk5) {
+
+    }
+
+    public static void SmallNativeAdmobRectangle(Activity activity, RelativeLayout layNative, String selectAdsBackup, String nativeId, String idNativeBackup, String Hpk1,
                                                  String Hpk2, String Hpk3, String Hpk4, String Hpk5) {
 
     }
