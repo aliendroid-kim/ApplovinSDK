@@ -29,7 +29,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.6.0'
     implementation "androidx.multidex:multidex:2.0.1"
-    implementation 'com.applovin:applovin-sdk:11.4.3'
+    implementation 'com.applovin:applovin-sdk:11.4.4'
     implementation 'com.applovin.mediation:adcolony-adapter:4.7.0.0'
     implementation 'com.applovin.mediation:google-adapter:21.0.0.0'
     implementation 'com.applovin.mediation:facebook-adapter:6.11.0.2'
