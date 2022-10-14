@@ -13,11 +13,11 @@ public class AliendroidInitialize {
     }
 
     public static void SelectAdsGoogleAds(Activity activity, String selectAdsBackup, String idInitialize) {
+
     }
 
     public static void SelectAdsApplovinDis(Activity activity, String selectAdsBackup, String idInitialize) {
         AppLovinSdk.initializeSdk(activity);
-
     }
 
     public static void SelectAdsApplovinMax(Activity activity, String selectAdsBackup, String idInitialize) {
@@ -39,6 +39,7 @@ public class AliendroidInitialize {
     }
 
     public static void SelectAdsUnity(Activity activity, String selectAdsBackup, String idInitialize, String idInitializeBackupAds) {
+
     }
 
 
@@ -46,4 +47,11 @@ public class AliendroidInitialize {
 
     }
 
+    public static void SelectAdsAlienView(Activity activity, String selectAdsBackup, String idInitializeBackupAds) {
+
+    }
+
+    public static void SelectAdsAlienMediation(Activity activity, String selectAdsBackup,String idInitialize, String idInitializeBackupAds) {
+
+    }
 }

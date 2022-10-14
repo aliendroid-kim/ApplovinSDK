@@ -3,11 +3,10 @@ plugins {
 }
 
 android {
-    compileSdkVersion 31
-
+    compileSdkVersion 30
     defaultConfig {
         minSdkVersion 21
-        targetSdkVersion 31
+        targetSdkVersion 30
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -23,15 +22,18 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+
 }
 
 dependencies {
+
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.6.0'
+    implementation 'androidx.lifecycle:lifecycle-process:2.5.1'
     implementation "androidx.multidex:multidex:2.0.1"
-    implementation 'com.applovin:applovin-sdk:11.4.4'
-    implementation 'com.applovin.mediation:adcolony-adapter:4.7.0.0'
-    implementation 'com.applovin.mediation:google-adapter:21.0.0.0'
-    implementation 'com.applovin.mediation:facebook-adapter:6.11.0.2'
-    implementation 'com.applovin.mediation:unityads-adapter:4.2.1.0'
+    implementation 'com.applovin:applovin-sdk:11.5.2'
+    implementation 'com.applovin.mediation:facebook-adapter:6.12.0.0'
+    implementation 'com.flurry.android:analytics:13.3.0@aar'
+
 }
